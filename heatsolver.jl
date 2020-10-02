@@ -31,6 +31,7 @@ D = 7 * 10^(-7)      #soil diffusivity (m^2s^-1)
         end
         T[M,n+1] = T[M,n] + ξ*(-T[M,n]+T[M-1,n])
     end
+    T = Float64.(T)
     return T
 end
 
